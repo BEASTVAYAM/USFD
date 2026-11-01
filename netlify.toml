@@ -1,0 +1,4 @@
+[build]
+  base = "RailScan_UT_updated_with_field_gallery/railscan_work"
+  command = "npm ci --include=dev && npm run build"
+  publish = "dist"
