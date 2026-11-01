@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  background: #03100d;
+  margin: 0;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:not(:disabled),
+select:not(:disabled),
+input[type="range"] {
+  cursor: pointer;
+}
+
+.field {
+  display: block;
+  width: 100%;
+  margin-top: 0.35rem;
+  border: 1px solid rgb(6 78 59 / 0.8);
+  border-radius: 0.375rem;
+  background: #071d17;
+  color: #ecfdf5;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  outline: none;
+}
+
+.field:focus {
+  border-color: #34d399;
+}
+
+.report-section-title {
+  color: #065f46;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.report-label {
+  display: block;
+  color: #64748b;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.report-input {
+  display: block;
+  width: 100%;
+  margin-top: 0.2rem;
+  border: 0;
+  border-bottom: 1px solid #cbd5e1;
+  background: transparent;
+  color: #0f172a;
+  padding: 0.15rem 0;
+  font-size: 0.75rem;
+  outline: none;
+}
+
+.report-input:focus {
+  border-color: #047857;
+}
+
+.report-value {
+  margin-top: 0.2rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 8mm;
+  }
+
+  html,
+  body,
+  #root {
+    background: #fff !important;
+  }
+
+  .app-header,
+  .report-toolbar {
+    display: none !important;
+  }
+
+  .report-workspace {
+    min-height: auto !important;
+    background: #fff !important;
+    padding: 0 !important;
+  }
+
+  .standard-report {
+    max-width: none !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .standard-report section {
+    break-inside: avoid;
+  }
+
+  .standard-report input {
+    pointer-events: none;
+  }
+}

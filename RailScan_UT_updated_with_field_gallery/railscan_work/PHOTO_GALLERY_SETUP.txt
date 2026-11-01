@@ -1,0 +1,28 @@
+RAILSCAN UT - FIELD PHOTO GALLERY UPDATE
+
+What changed:
+1. src/components/Dashboard.tsx
+   - Added a new "Field Gallery" navigation tab.
+   - Gallery is available even before a dataset is loaded.
+   - Existing inspection views and navigation are preserved.
+2. src/components/FieldGallery.tsx
+   - New gallery component displaying the three supplied field photographs.
+3. public/images/
+   - rail-inspection-trolley.jpeg
+   - usfd-workstation.jpeg
+   - on-site-ultrasonic-testing.jpeg
+
+How to use:
+1. Extract this ZIP.
+2. Open the extracted project folder in VS Code.
+3. In the terminal, run: npm install
+4. Then run: npm run dev
+5. Open the local URL shown by Vite.
+6. Click "Field Gallery" in the top navigation to view the photos.
+
+To merge into an existing copy instead of replacing the whole project:
+- Replace src/components/Dashboard.tsx with the one in this ZIP.
+- Add src/components/FieldGallery.tsx.
+- Copy the three files from public/images/ into your existing public/images/ folder.
+
+No package dependencies were added.
